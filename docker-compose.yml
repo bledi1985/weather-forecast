@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+
+  weather-forecast:
+    container_name: weather-forecast
+    ports:
+      - "5000:5000"
+    image: weather
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE="demo"
